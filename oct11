@@ -1,0 +1,31 @@
+class Parent{
+    void display(){
+        System.out.println("the number in the parent class is:" );
+        
+    }
+   void show(int num){
+    System.out.println("The number in the child is:" +num);
+} 
+}
+class Child extends Parent{
+    void display(){
+        System.out.println("This is the child class");
+    
+    }
+
+void show(double num){
+    System.out.println("The number in the child is:" +num);
+}}
+
+public class Main {
+public static void main(String[] args) {
+Parent parentObj= new Parent();
+Child childObj = new Child();
+// Method Overloading
+parentObj.show(5); // Calls the show(int num) method in Parent class
+childObj.show(7.5); // Calls the show(double num) method in Child class
+// Method Overriding
+parentObj.display(); // Calls the display() method in Parent class
+childObj.display(); // Calls the overridden display() method in Child class
+}
+}
